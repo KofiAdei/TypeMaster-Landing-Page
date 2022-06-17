@@ -83,8 +83,7 @@ main {
     width: 60%;
     color: var(--secondary-col);
     font-weight: 800;
-    /* font-size: 3.8em; */
-    font-size: 1vw;
+    font-size: 3.8em;
     text-transform: uppercase;
 }
 
