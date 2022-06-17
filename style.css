@@ -18,8 +18,7 @@ html {
 
 body {
     max-width: 100vw;
-    height: 100vh;
-    padding: 1.5% 10%;
+    padding: 1.5% 8%;
     overflow-x: hidden;
 }
 
@@ -30,7 +29,8 @@ body {
 }
 
 .menu {
-    height: 5.2%;
+    width: 95%;
+    height: 6.2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,8 +38,8 @@ body {
 }
 
 .button-menu {
-    width: 15%;
-    height: 100%;
+    min-width: 17%;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,13 +59,11 @@ main {
     height: 100%;
 }
 
-.intro, .mid-sect, .bottom-sect {
-    display: flex;
-    justify-content: space-between;
-    height: calc(100% / 2.08);
-}
-
 .intro {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 3%;
     margin-bottom: 2%;
 }
 
@@ -126,8 +124,9 @@ main {
 }
 
 .box-2 {
+    min-height: 65vh;
     background-image: url("./media/image-keyboard.jpg");
-    background-size: 110% 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
@@ -145,6 +144,15 @@ main {
 #square-2 {
     top: 79%;
     right: 92%;
+}
+
+.mid-sect, .bottom-sect {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mid-sect {
+    height: 50vh;
 }
 
 .box-3 {
@@ -175,6 +183,7 @@ main {
 }
 
 .box-5 {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -189,6 +198,7 @@ main {
 }
 
 .bottom-sect {
+    height: 50vh;
     display: flex;
     margin-top: 2%;
     gap: 2%;
@@ -219,11 +229,10 @@ h3 {
 }
 
 footer {
-    position: relative;
     display: grid;
     place-content: center;
-    top: 65%;
-    height: 20%;
+    height: 100px;
+    margin-top: 10%;
 }
 
 span {
@@ -237,7 +246,6 @@ span {
 
 @media screen and (max-width: 900px) {
     body {
-        min-height: 100vh;
         padding: 1.5% 3%;
         overflow-x: hidden;
     }
@@ -246,14 +254,13 @@ span {
         width: 20%;
     }
 
-    .intro {
-        min-height: 60%;
-    }
-
     .box-1 {
         position: relative;
-        top: 20%;
         height: 50%;
+    }
+
+    .header-div {
+        width: 80%;
     }
 
     .box-2 {
@@ -266,13 +273,19 @@ span {
     }
 
     .mid-sect {
-        min-height: 70%;
+        height: 65vh;
         display: grid;
         grid-template-columns: 35% 60%;
-        grid-template-rows: 50% 50%;
+        grid-template-rows: 60% 30%;
+        row-gap: 10%;
+    }
+
+    .box-3 {
+        height: 100%;
     }
 
     .box-4 {
+        height: 100%;
         position: relative;
         left: 0.4%;
     }
@@ -297,42 +310,50 @@ span {
     }
 
     .bottom-sect {
+        height: 50vh;
         flex-wrap: wrap;
     }
 
     .box-6, .box-7, .box-8, .box-9 {
-        min-width: 40%;
+        min-width: 38%;
         min-height: 50%;
         flex-grow: 2;
     }
 
     footer {
-        top: 150%;
+        margin-top: 80%;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) and (min-height: 318px) {
+    body {
+        padding: 8% 5%;
+    }
+
     .menu {
+        width: 100%;
         margin-bottom: 0;
     }
 
     .button-menu {
-        height: 75%;
-        width: 40%;
+        height: 40px;
+        width: 46%;
+    }
+
+    .header-div {
+        margin-top: 10%;
+    }
+
+    .button-sect {
+        margin-top: 15%;
     }
 
     .intro {
-        margin-top: 0;
-        min-height: 60%;
+        margin-top: 10%;
+        min-height: 160vh;
         flex-direction: column;
     }
-
-    .box-1 {
-        position: relative;
-        top: 2%;
-        margin-bottom: 10%;
-    }
-
+    
     .header-div {
         width: 100%;
     }
@@ -343,30 +364,37 @@ span {
 
     .box-2 {
         position: relative;
-        left: 0.3%;
-        width: 105%;
+        left: 2.5%;
+        width: 100vw;
+        min-height: 45vh;
+        margin-top: 20%;
     }
 
     .mid-sect {
-        min-height: 60%;
-        margin-top: 10%;
-        grid-template-areas: "a b"
-                             "c c";
+        height: 600px;
+        margin-top: 15%;
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: 25% 25% 25% 25%;
+        column-gap: 2px;
+        row-gap: 0;
     }
 
     .box-3 {
         position: relative;
-        right: 12%;
-        grid-area: a;
-        
+        right: 25%;
+        grid-column: 1 / 3;
+        grid-row: 1 / span 2;
     }
 
     .box-4 {
-        grid-area: b;
+        grid-column: 3 / 6;
+        grid-row: 1 / span 2;
+       
     }
 
     .box-5 {
-        grid-area: c;
+        grid-column: 1/ 6;
+        grid-row: 3 / 5;
         text-align: center;
 
     }
@@ -388,17 +416,28 @@ span {
         flex-wrap: nowrap;
         text-align: center;
         width: 100%;
+        min-height: 1200px;
     }
 
     .box-6, .box-7, .box-8, .box-9 {
-        min-height:  calc(100% / 1.5);
+        min-height:  calc(100% / 4.5);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
     }
 
+    .icon-monitor, .icon-bluetooth, .icon-battery, .icon-bulb {
+        height: 40px;
+    }
+
     footer {
-        top: 160%;
+        margin-top: 52%;
+    }
+}
+
+@media screen and (max-height: 320px) {
+    .box-2 {
+        transform: scaleY(150%);
     }
 }
