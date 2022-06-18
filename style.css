@@ -244,7 +244,7 @@ span {
     color: #7b8bad;
 }
 
-@media screen and (max-width: 900px) {
+@media screen, (max-width: 900px) and (max-height: 480px) {
     body {
         padding: 1.5% 3%;
         overflow-x: hidden;
@@ -254,18 +254,32 @@ span {
         width: 20%;
     }
 
+    .intro {
+        height: 100vh;
+        gap: 1%;
+        border: 2px solid blue;
+    }
+
     .box-1 {
         position: relative;
         height: 50%;
     }
 
     .header-div {
-        width: 80%;
+        width: 120%;
+        border: 2px solid orange;
+    }
+
+    .header {
+        font-size: 5.5vw;
+        line-height: 0.95em;
     }
 
     .box-2 {
+        height: 90%;
         position: relative;
-        left: 4%;
+        left: 7%;
+        transform: scaleX(120%);
     }
 
     .pattern-square {
@@ -273,11 +287,12 @@ span {
     }
 
     .mid-sect {
-        height: 65vh;
+        height: 140vh;
         display: grid;
         grid-template-columns: 35% 60%;
         grid-template-rows: 60% 30%;
         row-gap: 10%;
+        border: 2px solid green;
     }
 
     .box-3 {
@@ -310,8 +325,9 @@ span {
     }
 
     .bottom-sect {
-        height: 50vh;
+        height: 110vh;
         flex-wrap: wrap;
+        margin-top: 5%;
     }
 
     .box-6, .box-7, .box-8, .box-9 {
@@ -321,13 +337,13 @@ span {
     }
 
     footer {
-        margin-top: 80%;
+        margin-top: 140%;
     }
 }
 
-@media screen and (max-width: 600px) and (min-height: 318px) {
+@media screen and (max-width: 600px) and (min-height: 220px) {
     body {
-        padding: 8% 5%;
+        padding: 2% 5%;
     }
 
     .menu {
@@ -350,7 +366,7 @@ span {
 
     .intro {
         margin-top: 10%;
-        min-height: 160vh;
+        height: 160vh;
         flex-direction: column;
     }
     
@@ -360,6 +376,7 @@ span {
 
     .header {
         font-size: 3rem;
+        line-height: 0.88em;
     }
 
     .box-2 {
@@ -436,8 +453,3 @@ span {
     }
 }
 
-@media screen and (max-height: 320px) {
-    .box-2 {
-        transform: scaleY(150%);
-    }
-}
