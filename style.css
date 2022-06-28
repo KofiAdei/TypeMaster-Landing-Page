@@ -432,13 +432,13 @@ span {
     }
 
     .mid-sect {
-        height: 80vh;
+        height: 65vh;
         margin-top: 6%;
         grid-template-rows: 40% 60%;
     }
 
     #section-02 {
-        height: 75%;
+        height: 68%;
         flex-direction: column;
     }
 
