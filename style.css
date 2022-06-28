@@ -416,6 +416,10 @@ span {
         font-size: 12vw;
     }
 
+    #paragraph-1 {
+        text-align: left;
+    }
+
     .button-sect {
         height: 15%;
     }
