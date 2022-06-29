@@ -294,7 +294,7 @@ span {
     }
 
     #section-01 {
-        min-height: 55%;
+        min-height: 40%;
     }
 
     #button-text-02, h5 {
@@ -320,6 +320,7 @@ span {
     }
 
     .mid-sect {
+        height: 600px;
         display: grid;
         gap: 2%;
         grid-template-columns: 32% 32% 32%;
@@ -329,6 +330,7 @@ span {
     .box-3 {
         width: 100%;
         grid-column: 1 / span 1;
+        background-repeat: no-repeat;
     }
 
     .box-4 {
@@ -359,7 +361,7 @@ span {
     }
 
     .bottom-sect {
-        height: 130vh;
+        height: 800px;
         flex-wrap: wrap;
     }
 
@@ -368,14 +370,14 @@ span {
      .box-8,
      .box-9 {
         height: 48%;
-        width: 50%;
+        width: 48%;
         justify-content: flex-start;
-        gap: 6%;
+        gap: 8%;
      }
 
     .icons {
-        height: 15vw;
-        width: 14vw;
+        height: 12vw;
+        width: 12vw;
     }
      
     h6 {
